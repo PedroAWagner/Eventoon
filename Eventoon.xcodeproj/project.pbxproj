@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E980CB82449094600F83606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CB72449094600F83606 /* AppDelegate.swift */; };
+		3E980CBA2449094600F83606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CB92449094600F83606 /* SceneDelegate.swift */; };
+		3E980CBC2449094600F83606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CBB2449094600F83606 /* ViewController.swift */; };
+		3E980CBF2449094600F83606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E980CBD2449094600F83606 /* Main.storyboard */; };
+		3E980CC12449094800F83606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E980CC02449094800F83606 /* Assets.xcassets */; };
+		3E980CC42449094800F83606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E980CC22449094800F83606 /* LaunchScreen.storyboard */; };
+		3E980CCF2449094800F83606 /* EventoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CCE2449094800F83606 /* EventoonTests.swift */; };
+		3E980CDA2449094800F83606 /* EventoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CD92449094800F83606 /* EventoonUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E980CCB2449094800F83606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E980CAC2449094600F83606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E980CB32449094600F83606;
+			remoteInfo = Eventoon;
+		};
+		3E980CD62449094800F83606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E980CAC2449094600F83606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E980CB32449094600F83606;
+			remoteInfo = Eventoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E980CB42449094600F83606 /* Eventoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E980CB72449094600F83606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E980CB92449094600F83606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E980CBB2449094600F83606 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E980CBE2449094600F83606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E980CC02449094800F83606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E980CC32449094800F83606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E980CC52449094800F83606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E980CCA2449094800F83606 /* EventoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E980CCE2449094800F83606 /* EventoonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoonTests.swift; sourceTree = "<group>"; };
+		3E980CD02449094800F83606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E980CD52449094800F83606 /* EventoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E980CD92449094800F83606 /* EventoonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoonUITests.swift; sourceTree = "<group>"; };
+		3E980CDB2449094800F83606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E980CB12449094600F83606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E980CC72449094800F83606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E980CD22449094800F83606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E980CAB2449094600F83606 = {
+			isa = PBXGroup;
+			children = (
+				3E980CB62449094600F83606 /* Eventoon */,
+				3E980CCD2449094800F83606 /* EventoonTests */,
+				3E980CD82449094800F83606 /* EventoonUITests */,
+				3E980CB52449094600F83606 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E980CB52449094600F83606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E980CB42449094600F83606 /* Eventoon.app */,
+				3E980CCA2449094800F83606 /* EventoonTests.xctest */,
+				3E980CD52449094800F83606 /* EventoonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E980CB62449094600F83606 /* Eventoon */ = {
+			isa = PBXGroup;
+			children = (
+				3E980CB72449094600F83606 /* AppDelegate.swift */,
+				3E980CB92449094600F83606 /* SceneDelegate.swift */,
+				3E980CBB2449094600F83606 /* ViewController.swift */,
+				3E980CBD2449094600F83606 /* Main.storyboard */,
+				3E980CC02449094800F83606 /* Assets.xcassets */,
+				3E980CC22449094800F83606 /* LaunchScreen.storyboard */,
+				3E980CC52449094800F83606 /* Info.plist */,
+			);
+			path = Eventoon;
+			sourceTree = "<group>";
+		};
+		3E980CCD2449094800F83606 /* EventoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E980CCE2449094800F83606 /* EventoonTests.swift */,
+				3E980CD02449094800F83606 /* Info.plist */,
+			);
+			path = EventoonTests;
+			sourceTree = "<group>";
+		};
+		3E980CD82449094800F83606 /* EventoonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E980CD92449094800F83606 /* EventoonUITests.swift */,
+				3E980CDB2449094800F83606 /* Info.plist */,
+			);
+			path = EventoonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E980CB32449094600F83606 /* Eventoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E980CDE2449094800F83606 /* Build configuration list for PBXNativeTarget "Eventoon" */;
+			buildPhases = (
+				3E980CB02449094600F83606 /* Sources */,
+				3E980CB12449094600F83606 /* Frameworks */,
+				3E980CB22449094600F83606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Eventoon;
+			productName = Eventoon;
+			productReference = 3E980CB42449094600F83606 /* Eventoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E980CC92449094800F83606 /* EventoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E980CE12449094800F83606 /* Build configuration list for PBXNativeTarget "EventoonTests" */;
+			buildPhases = (
+				3E980CC62449094800F83606 /* Sources */,
+				3E980CC72449094800F83606 /* Frameworks */,
+				3E980CC82449094800F83606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E980CCC2449094800F83606 /* PBXTargetDependency */,
+			);
+			name = EventoonTests;
+			productName = EventoonTests;
+			productReference = 3E980CCA2449094800F83606 /* EventoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E980CD42449094800F83606 /* EventoonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E980CE42449094800F83606 /* Build configuration list for PBXNativeTarget "EventoonUITests" */;
+			buildPhases = (
+				3E980CD12449094800F83606 /* Sources */,
+				3E980CD22449094800F83606 /* Frameworks */,
+				3E980CD32449094800F83606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E980CD72449094800F83606 /* PBXTargetDependency */,
+			);
+			name = EventoonUITests;
+			productName = EventoonUITests;
+			productReference = 3E980CD52449094800F83606 /* EventoonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E980CAC2449094600F83606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Pedro Arenhardt Wagner ";
+				TargetAttributes = {
+					3E980CB32449094600F83606 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3E980CC92449094800F83606 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3E980CB32449094600F83606;
+					};
+					3E980CD42449094800F83606 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 3E980CB32449094600F83606;
+					};
+				};
+			};
+			buildConfigurationList = 3E980CAF2449094600F83606 /* Build configuration list for PBXProject "Eventoon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E980CAB2449094600F83606;
+			productRefGroup = 3E980CB52449094600F83606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E980CB32449094600F83606 /* Eventoon */,
+				3E980CC92449094800F83606 /* EventoonTests */,
+				3E980CD42449094800F83606 /* EventoonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E980CB22449094600F83606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E980CC42449094800F83606 /* LaunchScreen.storyboard in Resources */,
+				3E980CC12449094800F83606 /* Assets.xcassets in Resources */,
+				3E980CBF2449094600F83606 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E980CC82449094800F83606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E980CD32449094800F83606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E980CB02449094600F83606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E980CBC2449094600F83606 /* ViewController.swift in Sources */,
+				3E980CB82449094600F83606 /* AppDelegate.swift in Sources */,
+				3E980CBA2449094600F83606 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E980CC62449094800F83606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E980CCF2449094800F83606 /* EventoonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E980CD12449094800F83606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E980CDA2449094800F83606 /* EventoonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E980CCC2449094800F83606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E980CB32449094600F83606 /* Eventoon */;
+			targetProxy = 3E980CCB2449094800F83606 /* PBXContainerItemProxy */;
+		};
+		3E980CD72449094800F83606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E980CB32449094600F83606 /* Eventoon */;
+			targetProxy = 3E980CD62449094800F83606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E980CBD2449094600F83606 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E980CBE2449094600F83606 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E980CC22449094800F83606 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E980CC32449094800F83606 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E980CDC2449094800F83606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E980CDD2449094800F83606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E980CDF2449094800F83606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68YW7P9895;
+				INFOPLIST_FILE = Eventoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroawagner.Eventoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E980CE02449094800F83606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68YW7P9895;
+				INFOPLIST_FILE = Eventoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroawagner.Eventoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E980CE22449094800F83606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68YW7P9895;
+				INFOPLIST_FILE = EventoonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroawagner.EventoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventoon.app/Eventoon";
+			};
+			name = Debug;
+		};
+		3E980CE32449094800F83606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68YW7P9895;
+				INFOPLIST_FILE = EventoonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroawagner.EventoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eventoon.app/Eventoon";
+			};
+			name = Release;
+		};
+		3E980CE52449094800F83606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68YW7P9895;
+				INFOPLIST_FILE = EventoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroawagner.EventoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Eventoon;
+			};
+			name = Debug;
+		};
+		3E980CE62449094800F83606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68YW7P9895;
+				INFOPLIST_FILE = EventoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedroawagner.EventoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Eventoon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E980CAF2449094600F83606 /* Build configuration list for PBXProject "Eventoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E980CDC2449094800F83606 /* Debug */,
+				3E980CDD2449094800F83606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E980CDE2449094800F83606 /* Build configuration list for PBXNativeTarget "Eventoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E980CDF2449094800F83606 /* Debug */,
+				3E980CE02449094800F83606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E980CE12449094800F83606 /* Build configuration list for PBXNativeTarget "EventoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E980CE22449094800F83606 /* Debug */,
+				3E980CE32449094800F83606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E980CE42449094800F83606 /* Build configuration list for PBXNativeTarget "EventoonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E980CE52449094800F83606 /* Debug */,
+				3E980CE62449094800F83606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E980CAC2449094600F83606 /* Project object */;
+}
