@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainCoordinator.swift
 //  Eventoon
 //
 //  Created by Pedro Arenhardt Wagner  on 16/04/20.
@@ -8,11 +8,6 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
+protocol Coordinator {
+    func start()
 }
-
