@@ -1,0 +1,6 @@
+framework module Pods_EventoonTests {
+  umbrella header "Pods-EventoonTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="ekD-rd-qte" customClass="EventAboutTableViewCell" customModule="Eventoon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ekD-rd-qte" id="lmU-vY-PpL">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0b-BO-gst">
+                        <rect key="frame" x="20" y="10" width="58" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="nqE-jY-hVZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-jU-rsa">
+                        <rect key="frame" x="20" y="45" width="374" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ecs-jU-rsa" firstAttribute="leading" secondItem="lmU-vY-PpL" secondAttribute="leading" constant="20" id="8IR-zy-c35"/>
+                    <constraint firstItem="ecs-jU-rsa" firstAttribute="top" secondItem="V0b-BO-gst" secondAttribute="bottom" constant="15" id="AVK-8h-Bs8"/>
+                    <constraint firstItem="V0b-BO-gst" firstAttribute="top" secondItem="lmU-vY-PpL" secondAttribute="top" constant="10" id="I8t-Rm-e5o"/>
+                    <constraint firstItem="V0b-BO-gst" firstAttribute="leading" secondItem="lmU-vY-PpL" secondAttribute="leading" constant="20" id="Pil-h7-6FW"/>
+                    <constraint firstAttribute="bottom" secondItem="ecs-jU-rsa" secondAttribute="bottom" constant="11" id="XJH-No-xyx"/>
+                    <constraint firstAttribute="trailing" secondItem="ecs-jU-rsa" secondAttribute="trailing" constant="20" id="dG4-pR-OA1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="ecs-jU-rsa" id="EMd-yk-Jtw"/>
+            </connections>
+            <point key="canvasLocation" x="2.8985507246376816" y="109.48660714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
