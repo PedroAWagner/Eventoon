@@ -55,6 +55,7 @@ final class EventDetailsViewController: UIViewController {
     // MARK: - "Setups"
     private func setupView() {
         view.backgroundColor = .baseDarkGray
+        title = StringConstants.eventDetails
         setupNavigationBar()
     }
     
@@ -90,12 +91,19 @@ final class EventDetailsViewController: UIViewController {
             EventImageTableViewCell.self,
             EventSummaryTableViewCell.self,
             EventAboutTableViewCell.self,
-            EventLocationTableViewCell.self
+            EventLocationTableViewCell.self,
+            EventBuyButtonTableViewCell.self
         )
     }
     
     // MARK: - Actions
     private func share() {
-        #warning("Implement this")
+        let shareText = StringConstants.checkoutEvent.replacingOccurrences(of: "{eventName}", with: viewModel.event?.title ?? "")
+
+        let textToShare = [shareText]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = view
+
+        present(activityViewController, animated: true, completion: nil)
     }
 }

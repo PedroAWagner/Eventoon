@@ -19,6 +19,8 @@
 		3E0EBBC4244A94C100137A39 /* EventSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EBBC3244A94C100137A39 /* EventSummaryTableViewCell.swift */; };
 		3E0EBBC6244A953A00137A39 /* EventSummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E0EBBC5244A953A00137A39 /* EventSummaryTableViewCell.xib */; };
 		3E0EBBC8244A9BD100137A39 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EBBC7244A9BD100137A39 /* DateExtension.swift */; };
+		3E5F4156244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */; };
+		3E5F4158244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5F4157244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib */; };
 		3E980CB82449094600F83606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CB72449094600F83606 /* AppDelegate.swift */; };
 		3E980CBA2449094600F83606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CB92449094600F83606 /* SceneDelegate.swift */; };
 		3E980CC12449094800F83606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E980CC02449094800F83606 /* Assets.xcassets */; };
@@ -88,6 +90,8 @@
 		3E0EBBC3244A94C100137A39 /* EventSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		3E0EBBC5244A953A00137A39 /* EventSummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventSummaryTableViewCell.xib; sourceTree = "<group>"; };
 		3E0EBBC7244A9BD100137A39 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBuyButtonTableViewCell.swift; sourceTree = "<group>"; };
+		3E5F4157244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventBuyButtonTableViewCell.xib; sourceTree = "<group>"; };
 		3E980CB42449094600F83606 /* Eventoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E980CB72449094600F83606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E980CB92449094600F83606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				3ED168C6244B47EF00B77789 /* EventAboutTableViewCell.xib */,
 				3ED168C8244B4D2B00B77789 /* EventLocationTableViewCell.swift */,
 				3ED168CA244B4D3900B77789 /* EventLocationTableViewCell.xib */,
+				3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */,
+				3E5F4157244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				3E0EBBC2244A903A00137A39 /* EventImageTableViewCell.xib in Resources */,
 				3E980CC12449094800F83606 /* Assets.xcassets in Resources */,
 				3ED168C7244B47EF00B77789 /* EventAboutTableViewCell.xib in Resources */,
+				3E5F4158244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib in Resources */,
 				3ED168CB244B4D3900B77789 /* EventLocationTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +627,7 @@
 			files = (
 				3ED73D8024492D3A000ED8FE /* EventsCoordinator.swift in Sources */,
 				3E0EBBC8244A9BD100137A39 /* DateExtension.swift in Sources */,
+				3E5F4156244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift in Sources */,
 				3E980CEB24490FE600F83606 /* BaseAPIService.swift in Sources */,
 				3ED73D8A24493E1C000ED8FE /* EventsTableViewCell.swift in Sources */,
 				3ED73D7E24492CF5000ED8FE /* EventsViewModel.swift in Sources */,

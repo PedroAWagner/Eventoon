@@ -13,6 +13,21 @@ extension UIView {
         layer.cornerRadius = radius
         layer.maskedCorners = corner.mask
     }
+    
+    func roundedBorders() {
+        cornerOn(.all, radius: frame.height / 2)
+    }
+    
+    func setGradientBackground(_ colors: UIColor ...) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.colors = colors.map { $0.cgColor }
+        
+        layer.insertSublayer(gradientLayer, at: 0)
+        clipsToBounds = true
+    }
 }
 
 //MARK:- Corner Struct

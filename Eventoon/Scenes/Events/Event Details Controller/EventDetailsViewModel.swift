@@ -14,6 +14,8 @@ final class EventDetailsViewModel {
     
     private let eventId: String?
     
+    var event: Event?
+    let eventStream = PublishSubject<Event>()
     let dataSourceStream = PublishSubject<DataSource>()
     
     // MARK: - Init
@@ -36,13 +38,23 @@ final class EventDetailsViewModel {
                 self?.dataSourceStream.onNext(DataSource())
                 return
             }
+            self?.event = event
+            
             let imageRow = EventImageTableViewCell.newRow(imageUrl: event.image ?? "")
             let summaryRow = EventSummaryTableViewCell.newRow(event: event)
             let aboutRow = EventAboutTableViewCell.newRow(event: event)
             let locationRow = EventLocationTableViewCell.newRow(event: event)
+            let buyRow = EventBuyButtonTableViewCell.newRow(event: event, buyTicketActions: self)
             
-            let dataSource = DataSource(with: [imageRow, summaryRow, aboutRow, locationRow])
+            let dataSource = DataSource(with: [imageRow, summaryRow, aboutRow, locationRow, buyRow])
             self?.dataSourceStream.onNext(dataSource)
         }
+    }
+}
+
+// MARK: - Extension: BuyTicketCellProtocol
+extension EventDetailsViewModel: BuyTicketCellProtocol {
+    func goToTicketsDetails() {
+        print(event?.cupons)
     }
 }

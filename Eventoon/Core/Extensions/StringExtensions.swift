@@ -37,5 +37,9 @@ extension String {
 struct StringConstants {
     static let attendants = "Attending"
     static let events = "Events"
+    static let eventDetails = "Event Details"
+    static let ticketDetails = "Ticket Details"
     static let date = "Date"
+    
+    static let checkoutEvent = "Hey! I found the event '{eventName}' on Eventoon. Check it out!"
 }
