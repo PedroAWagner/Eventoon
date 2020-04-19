@@ -9,14 +9,15 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import CoreLocation
 
 final class EventDetailsViewModel {
     
     private let eventId: String?
     
     var event: Event?
-    let eventStream = PublishSubject<Event>()
     let dataSourceStream = PublishSubject<DataSource>()
+    let purchaseDataStream = PublishSubject<Event>()
     
     // MARK: - Init
     init(eventId: String?) {
@@ -55,6 +56,7 @@ final class EventDetailsViewModel {
 // MARK: - Extension: BuyTicketCellProtocol
 extension EventDetailsViewModel: BuyTicketCellProtocol {
     func goToTicketsDetails() {
-        print(event?.cupons)
+        guard let event = event else { return }
+        purchaseDataStream.onNext(event)
     }
 }

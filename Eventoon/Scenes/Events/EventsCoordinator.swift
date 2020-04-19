@@ -11,6 +11,7 @@ import UIKit
 protocol EventsCoordinatorActions {
     func showEventsDetail(eventId: String)
     func popViewController()
+    func purchaseTicket(event: Event)
 }
 
 final class EventsCoordinator: Coordinator {
@@ -36,6 +37,8 @@ final class EventsCoordinator: Coordinator {
         presenter.navigationBar.barTintColor = .baseGray
         presenter.navigationBar.tintColor = .white
         presenter.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        presenter.interactivePopGestureRecognizer?.delegate = nil
     }
 }
 
@@ -51,5 +54,10 @@ extension EventsCoordinator: EventsCoordinatorActions {
     
     func popViewController() {
         presenter.popViewController(animated: true)
+    }
+    
+    func purchaseTicket(event: Event) {
+        let checkoutCoordinator = CheckoutCoordinator(presenter: self.presenter, event: event)
+        checkoutCoordinator.start()
     }
 }

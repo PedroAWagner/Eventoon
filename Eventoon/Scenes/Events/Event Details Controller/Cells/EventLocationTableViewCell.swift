@@ -32,7 +32,6 @@ final class EventLocationTableViewCell: UITableViewCell {
         let coordinateRegion = MKCoordinateRegion(center: eventCoordinates.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
         let annotation = MKPointAnnotation()
         annotation.coordinate = eventCoordinates.coordinate
-//        annotation.title =
         
         map.addAnnotation(annotation)
         map.setRegion(coordinateRegion, animated: true)

@@ -36,7 +36,7 @@ final class EventBuyButtonTableViewCell: UITableViewCell {
             
             cell.actionButton.setTitle("FROM \(String.currency(from: event.price) ?? "") - GET IT!", for: .normal)
             cell.actionButton.setGradientBackground(.baseOrange, .baseRedishPink)
-            cell.actionButton.roundedBorders()
+            cell.actionButton.roundedCorners()
             
             cell.actionButton.rx
                 .tap

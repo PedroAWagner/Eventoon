@@ -21,6 +21,10 @@
 		3E0EBBC8244A9BD100137A39 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EBBC7244A9BD100137A39 /* DateExtension.swift */; };
 		3E5F4156244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */; };
 		3E5F4158244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5F4157244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib */; };
+		3E5F415B244BB29D002C73A2 /* CheckoutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F415A244BB29D002C73A2 /* CheckoutCoordinator.swift */; };
+		3E5F415E244BBF74002C73A2 /* PurchaseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F415D244BBF74002C73A2 /* PurchaseDetailsViewController.swift */; };
+		3E5F4160244BBFF7002C73A2 /* PurchaseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F415F244BBFF7002C73A2 /* PurchaseDetailsViewModel.swift */; };
+		3E5F4162244BC006002C73A2 /* PurchaseDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5F4161244BC006002C73A2 /* PurchaseDetailsViewController.xib */; };
 		3E980CB82449094600F83606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CB72449094600F83606 /* AppDelegate.swift */; };
 		3E980CBA2449094600F83606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E980CB92449094600F83606 /* SceneDelegate.swift */; };
 		3E980CC12449094800F83606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E980CC02449094800F83606 /* Assets.xcassets */; };
@@ -92,6 +96,10 @@
 		3E0EBBC7244A9BD100137A39 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBuyButtonTableViewCell.swift; sourceTree = "<group>"; };
 		3E5F4157244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventBuyButtonTableViewCell.xib; sourceTree = "<group>"; };
+		3E5F415A244BB29D002C73A2 /* CheckoutCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutCoordinator.swift; sourceTree = "<group>"; };
+		3E5F415D244BBF74002C73A2 /* PurchaseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseDetailsViewController.swift; sourceTree = "<group>"; };
+		3E5F415F244BBFF7002C73A2 /* PurchaseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseDetailsViewModel.swift; sourceTree = "<group>"; };
+		3E5F4161244BC006002C73A2 /* PurchaseDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseDetailsViewController.xib; sourceTree = "<group>"; };
 		3E980CB42449094600F83606 /* Eventoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E980CB72449094600F83606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E980CB92449094600F83606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,18 +178,37 @@
 		3E0EBBBE244A8FAF00137A39 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3E0EBBBF244A902E00137A39 /* EventImageTableViewCell.swift */,
 				3E0EBBC1244A903A00137A39 /* EventImageTableViewCell.xib */,
-				3E0EBBC3244A94C100137A39 /* EventSummaryTableViewCell.swift */,
+				3E0EBBBF244A902E00137A39 /* EventImageTableViewCell.swift */,
 				3E0EBBC5244A953A00137A39 /* EventSummaryTableViewCell.xib */,
-				3ED168C4244B47D900B77789 /* EventAboutTableViewCell.swift */,
+				3E0EBBC3244A94C100137A39 /* EventSummaryTableViewCell.swift */,
 				3ED168C6244B47EF00B77789 /* EventAboutTableViewCell.xib */,
-				3ED168C8244B4D2B00B77789 /* EventLocationTableViewCell.swift */,
+				3ED168C4244B47D900B77789 /* EventAboutTableViewCell.swift */,
 				3ED168CA244B4D3900B77789 /* EventLocationTableViewCell.xib */,
-				3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */,
+				3ED168C8244B4D2B00B77789 /* EventLocationTableViewCell.swift */,
 				3E5F4157244BAA91002C73A2 /* EventBuyButtonTableViewCell.xib */,
+				3E5F4155244BAA77002C73A2 /* EventBuyButtonTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		3E5F4159244BB281002C73A2 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				3E5F415A244BB29D002C73A2 /* CheckoutCoordinator.swift */,
+				3E5F415C244BBADB002C73A2 /* Purchase Details */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		3E5F415C244BBADB002C73A2 /* Purchase Details */ = {
+			isa = PBXGroup;
+			children = (
+				3E5F4161244BC006002C73A2 /* PurchaseDetailsViewController.xib */,
+				3E5F415D244BBF74002C73A2 /* PurchaseDetailsViewController.swift */,
+				3E5F415F244BBFF7002C73A2 /* PurchaseDetailsViewModel.swift */,
+			);
+			path = "Purchase Details";
 			sourceTree = "<group>";
 		};
 		3E980CAB2449094600F83606 = {
@@ -283,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				3ED73D7C24492CD7000ED8FE /* Events */,
+				3E5F4159244BB281002C73A2 /* Checkout */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -319,8 +347,8 @@
 		3ED73D8824493E0E000ED8FE /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3ED73D8924493E1C000ED8FE /* EventsTableViewCell.swift */,
 				3ED73D8B24493E5C000ED8FE /* EventsTableViewCell.xib */,
+				3ED73D8924493E1C000ED8FE /* EventsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -489,6 +517,7 @@
 			files = (
 				3ED73D8C24493E5C000ED8FE /* EventsTableViewCell.xib in Resources */,
 				3E0EBBB5244A79F300137A39 /* EventDetailsViewController.xib in Resources */,
+				3E5F4162244BC006002C73A2 /* PurchaseDetailsViewController.xib in Resources */,
 				3E0EBBC6244A953A00137A39 /* EventSummaryTableViewCell.xib in Resources */,
 				3E980CC42449094800F83606 /* LaunchScreen.storyboard in Resources */,
 				3ED73D7924492C05000ED8FE /* EventsViewController.xib in Resources */,
@@ -631,6 +660,7 @@
 				3E980CEB24490FE600F83606 /* BaseAPIService.swift in Sources */,
 				3ED73D8A24493E1C000ED8FE /* EventsTableViewCell.swift in Sources */,
 				3ED73D7E24492CF5000ED8FE /* EventsViewModel.swift in Sources */,
+				3E5F415B244BB29D002C73A2 /* CheckoutCoordinator.swift in Sources */,
 				3E0EBBB3244A5F6400137A39 /* DoubleExtensions.swift in Sources */,
 				3ED168C5244B47D900B77789 /* EventAboutTableViewCell.swift in Sources */,
 				3E0EBBB7244A7A0000137A39 /* EventDetailsViewController.swift in Sources */,
@@ -643,8 +673,10 @@
 				3EEDD71C2449F78A00EAD798 /* ViewExetensions.swift in Sources */,
 				3ED73D8F24494015000ED8FE /* EventsService.swift in Sources */,
 				3E0EBBBD244A883C00137A39 /* ImageExtension.swift in Sources */,
+				3E5F415E244BBF74002C73A2 /* PurchaseDetailsViewController.swift in Sources */,
 				3E980CB82449094600F83606 /* AppDelegate.swift in Sources */,
 				3E0EBBBB244A812F00137A39 /* APIEnvironment.swift in Sources */,
+				3E5F4160244BBFF7002C73A2 /* PurchaseDetailsViewModel.swift in Sources */,
 				3ED73D85244936B0000ED8FE /* Row.swift in Sources */,
 				3E0EBBC4244A94C100137A39 /* EventSummaryTableViewCell.swift in Sources */,
 				3ED73D7B24492C6F000ED8FE /* EventsViewController.swift in Sources */,

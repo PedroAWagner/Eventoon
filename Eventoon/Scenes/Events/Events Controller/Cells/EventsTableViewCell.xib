@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="height" constant="20" id="J7J-DH-06d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99211150407791138" green="0.81180280447006226" blue="0.23921853303909302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99215686274509807" green="0.81176470588235294" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarSign" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-jI-0BE">

@@ -52,6 +52,12 @@ final class EventDetailsViewController: UIViewController {
         viewModel.didBecomeActive()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     // MARK: - "Setups"
     private func setupView() {
         view.backgroundColor = .baseDarkGray
@@ -83,6 +89,12 @@ final class EventDetailsViewController: UIViewController {
             .asObservable()
             .subscribe(onNext: { [weak self] dataSource in
                 self?.dataSource = dataSource
+            }).disposed(by: disposeBag)
+        
+        viewModel.purchaseDataStream
+            .asObserver()
+            .subscribe(onNext: { [weak self] event in
+                self?.coordinatorActions?.purchaseTicket(event: event)
             }).disposed(by: disposeBag)
     }
     
