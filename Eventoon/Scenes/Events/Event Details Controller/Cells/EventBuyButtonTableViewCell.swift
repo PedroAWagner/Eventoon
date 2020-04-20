@@ -34,7 +34,8 @@ final class EventBuyButtonTableViewCell: UITableViewCell {
             guard let cell = cell as? EventBuyButtonTableViewCell else { return }
             cell.buyTicketActions = buyTicketActions
             
-            cell.actionButton.setTitle("FROM \(String.currency(from: event.price) ?? "") - GET IT!", for: .normal)
+            cell.actionButton.setTitle(
+                String(format: StringConstants.paymentButtonFormat, StringConstants.from.uppercased(), String.currency(from: event.price) ?? "", StringConstants.getIt.uppercased()), for: .normal)
             cell.actionButton.setGradientBackground(.baseOrange, .baseRedishPink)
             cell.actionButton.roundedCorners()
             

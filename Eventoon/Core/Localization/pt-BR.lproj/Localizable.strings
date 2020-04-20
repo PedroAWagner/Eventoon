@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Eventoon
+
+  Created by Pedro Arenhardt Wagner  on 19/04/20.
+  Copyright © 2020 Pedro Arenhardt Wagner . All rights reserved.
+*/
+
+"Attendants" = "Comparecerão";
+"Events" = "Eventos";
+"EventDetails" = "Detalhes do Evento";
+"PurchaseDetails" = "Detalhes da Compra";
+"Date" = "Data";
+"CheckoutEvent" = "Ei! Eu encontrei o evento '{eventName}' no Eventoon. Da uma olhada!";
+"About" = "SOBRE";
+"Location" = "LOCAL";
+"From" = "A Partir De";
+"GetIt" = "Compre Já";
+"Apply" = "USAR";
+"TotalPrice" = "Preço Total";
+"SimpleGetIt" = "COMPRAR";
+"Attention" = "Atenção";
+"PaymentProcessingError" = "Houve um erro processando seu pagamento. Por favor cheque as informações e tente novamente.";
+"Success" = "Sucesso";
+"SuccessMessage" = "Seu pagamento foi processado e seu ticket foi comprado! Uhul :)";
+"GenericFetchError" = "Houve um erro ao pegar as informações da API. Por favor, tente novament em alguns minutos.";
+"GenericSerializationError" = "Houve um erro ao enviar as informações para a API. Por favor, tente novamente em alguns minutos.";
+"ProvideNameErrorMessage" = "Por favor, informe o seu nome.";
+"ProvideEmailErrorMessage" = "Por favor, informe o seu e-mail.";
+"LetUsKnowWhoYouAre" = "Nos fale quem você é :)";
+"SignUp" = "INSCREVER-SE";
+"Name" = "Nome...";
+"Email" = "E-mail...";

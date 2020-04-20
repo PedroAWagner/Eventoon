@@ -17,6 +17,7 @@
                 <outlet property="cuponView" destination="alo-y0-0Uk" id="u1Y-Lh-Uhg"/>
                 <outlet property="dateLabel" destination="8N2-Zn-5gl" id="paK-xc-mVu"/>
                 <outlet property="gradientView" destination="fWB-67-0ed" id="zDn-cC-qpg"/>
+                <outlet property="gradientViewTopConstraint" destination="a3l-iP-2HZ" id="ZFO-zU-sgN"/>
                 <outlet property="paymentButton" destination="boB-uR-EGI" id="N7B-Hk-7gE"/>
                 <outlet property="paymentButtonBottomConstraint" destination="sc1-Wr-mfK" id="pUX-sB-HFv"/>
                 <outlet property="priceLabel" destination="kyJ-Ju-s8Z" id="rhI-AD-Fcr"/>
@@ -43,6 +44,9 @@
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="PurchaseDetails"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sma-Nf-VMV">
                             <rect key="frame" x="20" y="61" width="374" height="180.5"/>
@@ -77,6 +81,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="TotalPrice"/>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyJ-Ju-s8Z">
                                             <rect key="frame" x="312" y="14.5" width="42" height="21"/>
@@ -163,6 +170,9 @@
                             <state key="normal" title="APPLY">
                                 <color key="titleColor" name="baseRedishPink"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="Apply"/>
+                            </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="baseLightGray"/>
@@ -184,6 +194,9 @@
                     <state key="normal" title="GET IT">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="SimpleGetIt"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <color key="backgroundColor" name="baseGray"/>
@@ -194,6 +207,7 @@
                 <constraint firstItem="fWB-67-0ed" firstAttribute="top" secondItem="ff0-5T-qtu" secondAttribute="top" id="a3l-iP-2HZ"/>
                 <constraint firstItem="fWB-67-0ed" firstAttribute="leading" secondItem="ff0-5T-qtu" secondAttribute="leading" id="aB6-Iz-nyN"/>
                 <constraint firstItem="boB-uR-EGI" firstAttribute="leading" secondItem="ff0-5T-qtu" secondAttribute="leading" constant="20" id="bmy-JW-NZF"/>
+                <constraint firstItem="boB-uR-EGI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="alo-y0-0Uk" secondAttribute="bottom" constant="20" id="iwH-4h-RBf"/>
                 <constraint firstItem="ff0-5T-qtu" firstAttribute="trailing" secondItem="fWB-67-0ed" secondAttribute="trailing" id="izR-HH-m7S"/>
                 <constraint firstItem="alo-y0-0Uk" firstAttribute="leading" secondItem="ff0-5T-qtu" secondAttribute="leading" constant="20" id="pEt-1E-L21"/>
                 <constraint firstItem="ff0-5T-qtu" firstAttribute="bottom" secondItem="boB-uR-EGI" secondAttribute="bottom" constant="15" id="sc1-Wr-mfK"/>

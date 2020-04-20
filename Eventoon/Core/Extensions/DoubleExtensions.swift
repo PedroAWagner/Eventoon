@@ -13,4 +13,9 @@ extension Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
     }
+    
+    static func setDiscount(_ discount: Int, to price: Double) -> Double {
+        let discountPrice = (price * Double(discount)) / 100
+        return price - discountPrice
+    }
 }

@@ -11,7 +11,9 @@ import UIKit
 protocol EventsCoordinatorActions {
     func showEventsDetail(eventId: String)
     func popViewController()
+    func dismissViewController()
     func purchaseTicket(event: Event)
+    func createUser()
 }
 
 final class EventsCoordinator: Coordinator {
@@ -59,5 +61,16 @@ extension EventsCoordinator: EventsCoordinatorActions {
     func purchaseTicket(event: Event) {
         let checkoutCoordinator = CheckoutCoordinator(presenter: self.presenter, event: event)
         checkoutCoordinator.start()
+    }
+    
+    func createUser() {
+        let createUserViewModel = CreateUserViewModel(coordinatorActions: self)
+        let createUserViewController = CreateUserViewController(viewModel: createUserViewModel)
+        createUserViewController.isModalInPresentation = true
+        presenter.present(createUserViewController, animated: true)
+    }
+    
+    func dismissViewController() {
+        presenter.dismiss(animated: true, completion: nil)
     }
 }

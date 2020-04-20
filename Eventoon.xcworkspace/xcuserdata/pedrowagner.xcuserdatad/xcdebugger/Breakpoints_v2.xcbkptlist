@@ -3,4 +3,102 @@
    uuid = "23845D69-F10B-4B4E-BC30-A35275F43B99"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "550228A4-B7B6-4D40-B92F-83F3CDDE5E0C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eventoon/Scenes/Events/Checkout/Purchase Details/PurchaseDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "550228A4-B7B6-4D40-B92F-83F3CDDE5E0C - 2ad856a2d05fe812"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eventoon.PurchaseDetailsViewController.(keyboardWillShow in _E69E464D7034145BD55372A628088B08)(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "Eventoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrowagner/Documents/Workspace/CWI/Eventoon/Eventoon/Scenes/Events/Checkout/Purchase%20Details/PurchaseDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "192"
+                  endingLineNumber = "192"
+                  offsetFromSymbolStart = "3840">
+               </Location>
+               <Location
+                  uuid = "550228A4-B7B6-4D40-B92F-83F3CDDE5E0C - 4c192d983e717cce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Eventoon.PurchaseDetailsViewController.(keyboardWillShow in _E69E464D7034145BD55372A628088B08)(notification: __C.NSNotification) -&gt; ()"
+                  moduleName = "Eventoon"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pedrowagner/Documents/Workspace/CWI/Eventoon/Eventoon/Scenes/Events/Checkout/Purchase%20Details/PurchaseDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "193"
+                  endingLineNumber = "193"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46805CAB-275B-43AC-AC68-40ABAA46C2D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eventoon/Scenes/Events/Checkout/Purchase Details/PurchaseDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75893561-0DEB-471E-978F-E2924E4D696F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eventoon/Scenes/Events/Checkout/Purchase Details/PurchaseDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "keyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22B461A7-63FF-41C1-B7F6-8F195D9DEF26"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eventoon/Core/Extensions/DateExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "stringFromAPIDate(intDate:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

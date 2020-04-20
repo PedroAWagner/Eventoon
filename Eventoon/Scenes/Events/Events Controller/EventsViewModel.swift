@@ -13,16 +13,19 @@ import RxCocoa
 final class EventsViewModel {
     
     let dataSourceStream = PublishSubject<DataSource>()
-    let coordinatorActionsStream = PublishSubject<Event>()
+    let showEventsDetailStream = PublishSubject<Event>()
+    let createUserActionStream = PublishSubject<Void>()
+    let errorStream = PublishSubject<String>()
     
     func didBecomeActive() {
         refresh()
+        checkUserInfos()
     }
     
     func refresh() {
         EventsService.getEvents { [weak self] (events, error) in
             guard error == nil else {
-                #warning("Properly handle this error message")
+                self?.errorStream.onNext(error ?? ErrorConstants.genericFetchError)
                 return
             }
             guard let events = events else {
@@ -31,10 +34,24 @@ final class EventsViewModel {
             }
             
             let items = events.compactMap { [weak self] event -> Row in
-                return EventsTableViewCell.newRow(event: event, actionsStream: self?.coordinatorActionsStream)
+                return EventsTableViewCell.newRow(event: event, actionsStream: self?.showEventsDetailStream)
             }
             
             self?.dataSourceStream.onNext(DataSource(with: items))
+        }
+    }
+    
+    private func checkUserInfos() {
+        guard let userData = UserDefaults.standard.value(forKey: "User") as? Data else {
+            createUserActionStream.onNext(Void())
+            return
+        }
+        
+        do {
+            let user = try JSONDecoder().decode(User.self, from: userData)
+            User.currentUser = user
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }

@@ -44,6 +44,12 @@ final class EventsViewController: UIViewController {
         viewModel.didBecomeActive()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     // MARK: - "Setups"
     private func setupLocation() {
         locationManager.requestAlwaysAuthorization()
@@ -63,10 +69,16 @@ final class EventsViewController: UIViewController {
                 self?.dataSource = dataSource
             }).disposed(by: disposeBag)
         
-        viewModel.coordinatorActionsStream
+        viewModel.showEventsDetailStream
             .asObservable()
-            .subscribe(onNext: { [weak self] event in
-                self?.coordinatorActions?.showEventsDetail(eventId: event.id)
+            .subscribe(onNext: { [coordinatorActions] event in
+                coordinatorActions?.showEventsDetail(eventId: event.id)
+            }).disposed(by: disposeBag)
+        
+        viewModel.createUserActionStream
+            .asObservable()
+            .subscribe(onNext: { [coordinatorActions] in
+                coordinatorActions?.createUser()
             }).disposed(by: disposeBag)
     }
     
@@ -74,6 +86,7 @@ final class EventsViewController: UIViewController {
         tableView.register(EventsTableViewCell.self)
         
         let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .white
         tableView.refreshControl = refreshControl
         tableView.refreshControl?.rx
             .controlEvent(.valueChanged)
@@ -84,7 +97,6 @@ final class EventsViewController: UIViewController {
     
     private func setupView() {
         view.backgroundColor = .baseDarkGray
-        #warning("LocalizableStrings")
         title = StringConstants.events
     }
 }

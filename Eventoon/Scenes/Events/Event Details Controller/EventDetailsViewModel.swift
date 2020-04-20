@@ -18,6 +18,7 @@ final class EventDetailsViewModel {
     var event: Event?
     let dataSourceStream = PublishSubject<DataSource>()
     let purchaseDataStream = PublishSubject<Event>()
+    let errorStream = PublishSubject<String>()
     
     // MARK: - Init
     init(eventId: String?) {
@@ -32,7 +33,7 @@ final class EventDetailsViewModel {
     func refresh() {
         EventsService.getEvent(with: eventId ?? "") { [weak self] (event, error) in
             guard error == nil else {
-                #warning("Properly handle this error message")
+                self?.errorStream.onNext(error ?? ErrorConstants.genericFetchError)
                 return
             }
             guard let event = event else {

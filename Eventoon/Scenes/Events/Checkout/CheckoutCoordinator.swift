@@ -9,7 +9,8 @@
 import UIKit
 
 protocol CheckoutCoordinatorActions {
-    func goToPurchaseDetails()
+    func popViewController()
+    func goBackToEventList()
 }
 
 final class CheckoutCoordinator: Coordinator {
@@ -25,6 +26,18 @@ final class CheckoutCoordinator: Coordinator {
     func start() {
         let viewModel = PurchaseDetailsViewModel(event: event)
         let viewController = PurchaseDetailsViewController(viewModel: viewModel)
+        viewController.coordinatorActions = self
         presenter.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Extension: CheckoutCoordinatorActions
+extension CheckoutCoordinator: CheckoutCoordinatorActions {
+    func popViewController() {
+        presenter.popViewController(animated: true)
+    }
+    
+    func goBackToEventList() {
+        presenter.popToRootViewController(animated: true)
     }
 }

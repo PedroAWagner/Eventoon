@@ -25,8 +25,19 @@ final class PurchaseDetailsViewController: UIViewController {
     @IBOutlet weak var paymentButton: UIButton!
     @IBOutlet weak var applyButton: UIButton!
     @IBOutlet weak var paymentButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var gradientViewTopConstraint: NSLayoutConstraint!
+    
+    var coordinatorActions: CheckoutCoordinatorActions?
     
     private let paymentButtonBottomConstraintValue: CGFloat = 15
+    private var appliedCuponCode: Bool = false {
+        didSet {
+            if appliedCuponCode {
+                applyButton.isEnabled = false
+                cuponTextField.isEnabled = false
+            }
+        }
+    }
     
     private let viewModel: PurchaseDetailsViewModel
     private let disposeBag = DisposeBag()
@@ -73,12 +84,30 @@ final class PurchaseDetailsViewController: UIViewController {
         
         viewModel.cuponStream
             .asObservable()
-            .subscribe(onNext: { [cuponView] success in
+            .subscribe(onNext: { [weak self, cuponView] success, discount in
                 guard success else {
                     cuponView?.shakeAnimation()
                     return
                 }
                 cuponView?.pulseAnimation()
+                self?.repopulatePrice(with: discount)
+                self?.dismissKeyboard()
+            }).disposed(by: disposeBag)
+        
+        viewModel.paymentProcessingStream
+            .asObservable()
+            .subscribe(onNext: { [weak self, coordinatorActions] success in
+                guard success else {
+                    DispatchQueue.main.async {
+                        self?.showAlert(ErrorConstants.paymentProcessingError, title: ErrorConstants.attentionTitle)
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.showAlert(StringConstants.successMessage, title: StringConstants.success, okHandler: { _ in
+                        coordinatorActions?.goBackToEventList()
+                    })
+                }
             }).disposed(by: disposeBag)
     }
     
@@ -89,13 +118,19 @@ final class PurchaseDetailsViewController: UIViewController {
         paymentButton.roundedCorners()
         paymentButton.setGradientBackground(.baseOrange, .baseRedishPink)
         paymentButton.rx.tap
-            .subscribe(onNext: {
-                self.paymentButtonPressed()
+            .subscribe(onNext: { [viewModel] in
+                viewModel.finilizePurchase()
             }).disposed(by: disposeBag)
         
+        applyButton.isEnabled = false
         applyButton.rx.tap
             .subscribe(onNext: {
                 self.applyCupon()
+            }).disposed(by: disposeBag)
+        
+        backButton.rx.tap
+            .subscribe(onNext: { [coordinatorActions] in
+                coordinatorActions?.popViewController()
             }).disposed(by: disposeBag)
         
         cuponTextField.rx.controlEvent(.editingChanged)
@@ -142,20 +177,37 @@ final class PurchaseDetailsViewController: UIViewController {
     // MARK: - Actions
     @IBAction private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            paymentButtonBottomConstraint.constant = keyboardSize.height - view.safeAreaInsets.bottom + paymentButtonBottomConstraintValue
+            
+            let animationDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0.5
+            self.paymentButtonBottomConstraint.constant = keyboardSize.height - view.safeAreaInsets.bottom + paymentButtonBottomConstraintValue
+            
+            let overlappingYValue = (paymentButton.frame.minY - keyboardSize.height - view.safeAreaInsets.bottom + paymentButtonBottomConstraintValue) - cuponView.frame.maxY
+            
+            if overlappingYValue < 0 {
+                /* This '40' is the '20' max distance between the button and
+                    the view, and '20' from the status bar*/
+                gradientViewTopConstraint.constant = overlappingYValue - 40
+            }
+            
+            UIView.animate(withDuration: animationDuration) {
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
     @IBAction private func keyboardWillHide(notification: NSNotification) {
-        paymentButtonBottomConstraint.constant = paymentButtonBottomConstraintValue
+        let animationDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double) ?? 0.5
+
+        self.paymentButtonBottomConstraint.constant = self.paymentButtonBottomConstraintValue
+        gradientViewTopConstraint.constant = 0
+        
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     @IBAction private func dismissKeyboard() {
         self.cuponTextField.resignFirstResponder()
-    }
-    
-    private func paymentButtonPressed() {
-        
     }
     
     private func applyCupon() {
@@ -165,8 +217,22 @@ final class PurchaseDetailsViewController: UIViewController {
         viewModel.applyCupon(code: cuponCode)
     }
     
+    private func repopulatePrice(with discount: Int?) {
+        guard let discount = discount,
+            let currentPrice = priceLabel.text else {
+                return
+        }
+        let discountedPrice = String.setDiscount(discount, to: currentPrice)
+        priceLabel.text = discountedPrice
+        priceLabel.pulseAnimation()
+        appliedCuponCode = true
+    }
+    
     private func textDidChange(_ sender: UITextField) {
         guard let text = sender.text else { return }
+        guard !appliedCuponCode else {
+            return
+        }
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
             applyButton.isEnabled = false
             return

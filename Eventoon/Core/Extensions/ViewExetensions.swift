@@ -18,6 +18,10 @@ extension UIView {
         cornerOn(.all, radius: frame.height / 2)
     }
     
+    func flatCorners() {
+        cornerOn(.all, radius: 0)
+    }
+    
     func addBorder(borderWidth: CGFloat, borderColor: UIColor) {
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor

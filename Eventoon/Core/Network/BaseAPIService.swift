@@ -22,8 +22,7 @@ class BaseAPIService {
     
     func get(url: String, noConnection: @escaping () -> Void, completion: @escaping (Data?, String?) -> Void) {
         guard let url = URL(string: url) else {
-            #warning("Properly handle this error message")
-            completion(nil, "Error")
+            completion(nil, ErrorConstants.genericFetchError)
             return
         }
         
@@ -40,8 +39,7 @@ class BaseAPIService {
     
     func post(url: String, body: bodyJSON, noConnection: @escaping () -> Void, completion: @escaping (Data?, String?) -> Void) {
         guard let url = URL(string: url) else {
-            #warning("Properly handle this error message")
-            completion(nil, "Error")
+            completion(nil, ErrorConstants.genericFetchError)
             return
         }
         
@@ -50,13 +48,13 @@ class BaseAPIService {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         guard let jsonBody = try? JSONSerialization.data(withJSONObject: body, options: []) else {
-            #warning("Properly handle this error message")
+            completion(nil, ErrorConstants.genericSerializationError)
             return
         }
         
         let task = URLSession.shared.uploadTask(with: request, from: jsonBody) { data, response, error in
             guard error == nil else {
-                completion(nil, error?.localizedDescription)
+                completion(nil, ErrorConstants.genericFetchError)
                 return
             }
             completion(data, nil)
